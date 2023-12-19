@@ -2,8 +2,8 @@ package com.youtubekipper.crudjavaspring.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
-@Table(name = "product")
-@Entity(name = "product")
+@Table(name = "products")
+@Entity(name = "products")
 @Getter
 @Setter
 @AllArgsConstructor

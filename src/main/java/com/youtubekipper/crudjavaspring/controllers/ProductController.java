@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/product")
+@RequestMapping("/products")
 public class ProductController {
     @Autowired
     private ProductRepository repository;
@@ -34,16 +34,15 @@ public class ProductController {
     }
 
     @PutMapping
+    @Transactional
     public ResponseEntity updateProduct(@RequestBody @Valid RequestProductDTO data) {
-        Optional<Product> optionalProduct =  repository.findById(data.id());
+        Optional<Product> optionalProduct = repository.findById(data.id());
 
         if (optionalProduct.isPresent()) {
             Product product = optionalProduct.get();
 
             product.setName(data.name());
             product.setPrice_in_cents(data.price_in_cents());
-
-
 
             return ResponseEntity.ok(product);
         } else {
@@ -53,7 +52,7 @@ public class ProductController {
 
     @DeleteMapping("/{id}")
     @Transactional
-    public ResponseEntity deleteProduct(@PathVariable String id){
+    public ResponseEntity deleteProduct(@PathVariable String id) {
         Optional<Product> optionalProduct = repository.findById(id);
 
         if (optionalProduct.isPresent()) {
