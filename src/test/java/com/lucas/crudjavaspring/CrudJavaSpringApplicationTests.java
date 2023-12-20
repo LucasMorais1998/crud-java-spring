@@ -1,4 +1,4 @@
-package com.youtubekipper.crudjavaspring;
+package com.lucas.crudjavaspring;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

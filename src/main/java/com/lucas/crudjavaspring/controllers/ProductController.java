@@ -1,8 +1,8 @@
-package com.youtubekipper.crudjavaspring.controllers;
+package com.lucas.crudjavaspring.controllers;
 
-import com.youtubekipper.crudjavaspring.domain.product.Product;
-import com.youtubekipper.crudjavaspring.repositories.ProductRepository;
-import com.youtubekipper.crudjavaspring.domain.product.ProductRequestDTO;
+import com.lucas.crudjavaspring.domain.product.Product;
+import com.lucas.crudjavaspring.repositories.ProductRepository;
+import com.lucas.crudjavaspring.domain.product.ProductRequestDTO;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

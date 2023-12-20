@@ -1,4 +1,4 @@
-package com.youtubekipper.crudjavaspring.domain.user;
+package com.lucas.crudjavaspring.domain.user;
 
 public enum UserRole {
     ADMIN("admin"),

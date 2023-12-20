@@ -1,4 +1,4 @@
-package com.youtubekipper.crudjavaspring.domain.product;
+package com.lucas.crudjavaspring.domain.product;
 
 public record ProductResponseDTO(String id, String name, Integer price) {
     public ProductResponseDTO(Product product) {

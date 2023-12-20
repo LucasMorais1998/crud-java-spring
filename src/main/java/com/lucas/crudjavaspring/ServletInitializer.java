@@ -1,4 +1,4 @@
-package com.youtubekipper.crudjavaspring;
+package com.lucas.crudjavaspring;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

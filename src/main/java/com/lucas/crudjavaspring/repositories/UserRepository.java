@@ -1,6 +1,6 @@
-package com.youtubekipper.crudjavaspring.repositories;
+package com.lucas.crudjavaspring.repositories;
 
-import com.youtubekipper.crudjavaspring.domain.user.User;
+import com.lucas.crudjavaspring.domain.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 

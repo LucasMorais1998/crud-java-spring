@@ -1,4 +1,4 @@
-package com.youtubekipper.crudjavaspring.infra;
+package com.lucas.crudjavaspring.infra;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 

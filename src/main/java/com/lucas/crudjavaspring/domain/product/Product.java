@@ -1,4 +1,4 @@
-package com.youtubekipper.crudjavaspring.domain.product;
+package com.lucas.crudjavaspring.domain.product;
 
 import jakarta.persistence.*;
 import lombok.*;

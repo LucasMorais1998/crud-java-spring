@@ -1,4 +1,4 @@
-package com.youtubekipper.crudjavaspring.infra;
+package com.lucas.crudjavaspring.infra;
 
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.ResponseEntity;
