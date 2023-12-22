@@ -1,8 +1,10 @@
 package com.lucas.crudjavaspring.controllers;
 
 import com.lucas.crudjavaspring.domain.user.AuthenticationDTO;
+import com.lucas.crudjavaspring.domain.user.LoginResponseDTO;
 import com.lucas.crudjavaspring.domain.user.RegisterDTO;
 import com.lucas.crudjavaspring.domain.user.User;
+import com.lucas.crudjavaspring.infra.security.TokenService;
 import com.lucas.crudjavaspring.repositories.UserRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +22,11 @@ public class AuthenticationController {
 
     private UserRepository userRepository;
 
-    public AuthenticationController(UserRepository userRepository) {
+    private TokenService tokenService;
+
+    public AuthenticationController(UserRepository userRepository, TokenService tokenService) {
         this.userRepository = userRepository;
+        this.tokenService = tokenService;
     }
 
     @PostMapping("/login")
@@ -29,7 +34,9 @@ public class AuthenticationController {
         var usernamePassword = new UsernamePasswordAuthenticationToken(data.login(), data.password());
         var auth = this.authenticationManager.authenticate(usernamePassword);
 
-        return ResponseEntity.ok().build();
+        var token = tokenService.generateToken((User) auth.getPrincipal());
+
+        return ResponseEntity.ok(new LoginResponseDTO(token));
     }
 
     @PostMapping("/register")
